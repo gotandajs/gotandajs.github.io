@@ -10,8 +10,5 @@ gulp.task('sass', () => {
 });
 
 gulp.task('default', ['sass'], () => {
-  gulp.watch('./src/styles/**/*.scss', ['sass'])
-    .on('change', (e) => {
-      console.log(`File ${e.path} was ${e.type}.`);
-    });
+  gulp.watch('./src/styles/**/*.scss', ['sass']);
 });
