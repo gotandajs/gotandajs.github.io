@@ -1,0 +1,12 @@
+@import "lib/normalize";
+
+body {
+  background-color: #333;
+  color: #ff9;
+  margin: 0 1em;
+}
+
+a {
+  &:link, &:visited { color: #ccc; }
+  &:hover, &:active { color: #fff; }
+}
