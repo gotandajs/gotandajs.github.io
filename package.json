@@ -2,6 +2,7 @@
   "name": "gotandajs.github.io",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "engines": {
     "node": "^4"
   },
