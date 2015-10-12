@@ -179,11 +179,11 @@ th {
 
 body {
   background-color: #333;
-  color: #ff9;
+  color: #fff;
   text-align: center; }
 
 a:link, a:visited {
-  color: #ccc; }
+  color: #cccccc; }
 
 a:hover, a:active {
   color: #fff; }
@@ -202,7 +202,8 @@ section {
   padding: 0 1em;
   max-width: 768px; }
   section h2 {
-    font-family: 'Montserrat', sans-serif; }
+    font-family: 'Montserrat', sans-serif;
+    color: #ff9; }
 
 @media (max-width: 768px) {
   header h1 {
