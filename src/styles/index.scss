@@ -1,12 +1,41 @@
 @import "lib/normalize";
 
+$color-dark: #333;
+$color-key:  #ff9;
+
 body {
-  background-color: #333;
-  color: #ff9;
-  margin: 0 1em;
+  background-color: $color-dark;
+  color: $color-key;
+  text-align: center;
 }
 
 a {
   &:link, &:visited { color: #ccc; }
   &:hover, &:active { color: #fff; }
+}
+
+header {
+  background-color: $color-key;
+  color: $color-dark;
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    line-height: 4em;
+    font-size: 6em;
+  }
+}
+
+section {
+  margin: 4em 0;
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 4em;
+  }
 }
