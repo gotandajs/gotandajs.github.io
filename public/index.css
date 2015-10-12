@@ -198,7 +198,9 @@ header {
     font-size: 6em; }
 
 section {
-  margin: 4em 0; }
+  margin: 4em auto;
+  padding: 0 1em;
+  max-width: 768px; }
   section h2 {
     font-family: 'Montserrat', sans-serif; }
 

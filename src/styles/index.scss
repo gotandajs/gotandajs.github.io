@@ -27,7 +27,9 @@ header {
 }
 
 section {
-  margin: 4em 0;
+  margin: 4em auto;
+  padding: 0 1em;
+  max-width: 768px;
 
   h2 {
     font-family: 'Montserrat', sans-serif;
