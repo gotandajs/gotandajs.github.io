@@ -4,17 +4,25 @@
   "description": "",
   "private": true,
   "engines": {
-    "node": "^4"
+    "node": "^4.2"
   },
   "scripts": {
     "start": "gulp"
   },
   "dependencies": {
-    "babel": "*",
-    "babel-core": "*",
+    "babel": "^6",
+    "babel-preset-es2015": "*",
+    "browserify": "*",
     "gulp": "*",
     "gulp-autoprefixer": "*",
-    "gulp-plumber": "^1.0.1",
-    "gulp-sass": "*"
+    "gulp-gzip": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "vinyl-buffer": "*",
+    "vinyl-source-stream": "*",
+    "watchify": "*"
   }
 }
