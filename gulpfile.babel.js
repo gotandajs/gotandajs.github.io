@@ -21,26 +21,26 @@ gulp.task('sass', () => {
    .pipe(gulp.dest('./public'));
 });
 
-var browserifyOpts = {
+const browserifyOpts = {
   entries: ['./src/scripts/index.js'],
   transform: ['babelify'],
 };
 
-gulp.task('watchify', function() {
-  var opts = Object.assign(watchify.args, browserifyOpts);
-  var b = watchify(browserify(opts));
-  b.on('update', function(){ bundleJS(b) });
+gulp.task('watchify', () => {
+  let opts = Object.assign(watchify.args, browserifyOpts);
+  let b = watchify(browserify(opts));
+  b.on('update', () => bundleJS(b) );
   b.on('log', gutil.log);
   bundleJS(b);
 });
 
-gulp.task('browserify', function() {
-  var b = browserify(browserifyOpts);
+gulp.task('browserify', () => {
+  let b = browserify(browserifyOpts);
   bundleJS(b);
 });
 
-var bundleJS = function(b) {
-  var dest = './public';
+let bundleJS = function(b) {
+  const dest = './public';
   b.bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('bundle.js')).pipe(buffer()).pipe(gulp.dest(dest))
