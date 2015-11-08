@@ -10,8 +10,13 @@
     "start": "gulp"
   },
   "dependencies": {
-    "babel": "^6",
+    "voronoi": "*"
+  },
+  "devDependencies": {
+    "babel": "*",
+    "babel-core": "*",
     "babel-preset-es2015": "*",
+    "babelify": "*",
     "browserify": "*",
     "gulp": "*",
     "gulp-autoprefixer": "*",

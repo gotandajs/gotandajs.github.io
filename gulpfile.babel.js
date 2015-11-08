@@ -23,7 +23,7 @@ gulp.task('sass', () => {
 
 var browserifyOpts = {
   entries: ['./src/scripts/index.js'],
-  transform: [],
+  transform: ['babelify'],
 };
 
 gulp.task('watchify', function() {

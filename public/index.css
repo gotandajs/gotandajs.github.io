@@ -190,13 +190,21 @@ a:hover, a:active {
   color: #fff; }
 
 header {
+  position: relative;
   background-color: #ff9;
   color: #333; }
   header h1 {
+    position: relative;
+    z-index: 2;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     line-height: 4em;
     font-size: 6em; }
+  header canvas#voronoi {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0; }
 
 section {
   margin: 4em auto;
