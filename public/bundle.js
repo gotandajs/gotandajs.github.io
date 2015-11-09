@@ -1723,6 +1723,21 @@ if(typeof module !== 'undefined') module.exports = Voronoi;
 },{}],2:[function(require,module,exports){
 'use strict';
 
+var _voronoi = require('./voronoi');
+
+var _voronoi2 = _interopRequireDefault(_voronoi);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _voronoi2.default)();
+
+},{"./voronoi":3}],3:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _voronoi = require('voronoi');
 
 var _voronoi2 = _interopRequireDefault(_voronoi);
@@ -1827,6 +1842,6 @@ var Vert = function Vert() {
   this.a = Math.random() * 0.8; // transparency
 };
 
-initialize();
+exports.default = initialize;
 
 },{"voronoi":1}]},{},[2]);
