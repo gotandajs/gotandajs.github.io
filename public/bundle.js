@@ -1727,11 +1727,38 @@ var _voronoi = require('./voronoi');
 
 var _voronoi2 = _interopRequireDefault(_voronoi);
 
+var _slack = require('./slack');
+
+var _slack2 = _interopRequireDefault(_slack);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _voronoi2.default)();
+(0, _slack2.default)();
 
-},{"./voronoi":3}],3:[function(require,module,exports){
+},{"./slack":3,"./voronoi":4}],3:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var form = undefined;
+
+var initialize = function initialize() {
+  form = document.querySelector('#slack form');
+  form.addEventListener('submit', onSubmit);
+  form.querySelector('a').addEventListener('click', onSubmit);
+};
+
+var onSubmit = function onSubmit(event) {
+  event.preventDefault();
+  var email = form.email.value;
+  console.log(email);
+};
+
+exports.default = initialize;
+
+},{}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
