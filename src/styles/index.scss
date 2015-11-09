@@ -3,7 +3,7 @@
 $color-light:  #fff;
 $color-dark:   #333;
 $color-key:    #ff9;
-$color-button: #e16;
+$color-button: #e05;
 
 body {
   background-color: $color-dark;
@@ -57,7 +57,7 @@ section {
     height: 2.5em;
     width: 100%;
     max-width: 20em;
-    margin: 2em auto 1em;
+    margin: 1em auto;
 
     > * {
       display: table-cell;
@@ -85,10 +85,47 @@ section {
       text-align: center;
       vertical-align: middle;
       border-radius: 0 .2em .2em 0;
-      transition: background-color 400ms;
 
       &:hover {
         background-color: lighten($color-button, 10%);
+      }
+
+      &::before {
+        content: 'JOIN';
+      }
+    }
+
+    &.disable {
+      label, input {
+        background-color: #ccc;
+      }
+    }
+
+    &.wait {
+      a {
+        background: lighten($color-button, 10%) url('../loading.gif') center center no-repeat;
+
+        &::before {
+          content: '';
+        }
+      }
+    }
+
+    &.ok {
+      a {
+        background-color: #0b9;
+
+        &::before {
+          content: '✓';
+        }
+      }
+    }
+
+    &.ng {
+      a {
+        &::before {
+          content: 'NG...';
+        }
       }
     }
   }
@@ -99,6 +136,7 @@ section {
     font-size: 3em;
     line-height: 6em;
   }
+
   #slack form {
     font-size: 1em;
   }

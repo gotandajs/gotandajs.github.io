@@ -1746,14 +1746,48 @@ var form = undefined;
 
 var initialize = function initialize() {
   form = document.querySelector('#slack form');
+
+  // add event
   form.addEventListener('submit', onSubmit);
   form.querySelector('a').addEventListener('click', onSubmit);
+
+  // reset form
+  form.className = '';
+  form.email.value = '';
+  form.email.disabled = false;
 };
 
 var onSubmit = function onSubmit(event) {
   event.preventDefault();
+
   var email = form.email.value;
-  console.log(email);
+  if (email.trim() === '') {
+    return;
+  }
+  if (!email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
+    return handleError('Invalid email address.');
+  }
+
+  form.className = 'wait disable';
+  form.email.disabled = true;
+
+  setTimeout(function () {
+    var error = false;
+    if (error) {
+      handleError('error');
+    } else {
+      form.className = 'ok disable';
+    }
+  }, 1000);
+};
+
+var handleError = function handleError(msg) {
+  form.className = 'ng';
+  form.email.disabled = false;
+  console.error(msg);
+  setTimeout(function () {
+    return form.className = '';
+  }, 1000);
 };
 
 exports.default = initialize;

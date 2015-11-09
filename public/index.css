@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -221,7 +222,7 @@ section {
   height: 2.5em;
   width: 100%;
   max-width: 20em;
-  margin: 2em auto 1em; }
+  margin: 1em auto; }
   #slack form > * {
     display: table-cell; }
   #slack form label {
@@ -237,15 +238,27 @@ section {
   #slack form a {
     width: 4em;
     color: #fff;
-    background-color: #e16;
+    background-color: #e05;
     text-decoration: none;
     text-align: center;
     vertical-align: middle;
-    border-radius: 0 .2em .2em 0;
-    -webkit-transition: background-color 400ms;
-    transition: background-color 400ms; }
+    border-radius: 0 .2em .2em 0; }
     #slack form a:hover {
-      background-color: #f14185; }
+      background-color: #ff2271; }
+    #slack form a::before {
+      content: 'JOIN'; }
+  #slack form.disable label, #slack form.disable input {
+    background-color: #ccc; }
+  #slack form.wait a {
+    background: #ff2271 url("../loading.gif") center center no-repeat; }
+    #slack form.wait a::before {
+      content: ''; }
+  #slack form.ok a {
+    background-color: #0b9; }
+    #slack form.ok a::before {
+      content: '✓'; }
+  #slack form.ng a::before {
+    content: 'NG...'; }
 
 @media (max-width: 768px) {
   header h1 {
