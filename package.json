@@ -10,6 +10,7 @@
     "start": "gulp"
   },
   "dependencies": {
+    "superagent": "*",
     "voronoi": "*"
   },
   "devDependencies": {
