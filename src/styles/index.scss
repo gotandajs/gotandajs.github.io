@@ -49,7 +49,7 @@ section {
   }
 }
 
-#slack {
+#slack_form {
   form {
     display: table;
     font-size: 1.5em;
@@ -77,58 +77,48 @@ section {
       border: 0;
     }
 
-    a {
+    .submit {
       width: 4em;
       color: $color-light;
-      background-color: $color-button;
       text-decoration: none;
       text-align: center;
       vertical-align: middle;
       border-radius: 0 .2em .2em 0;
-
-      &:hover {
-        background-color: lighten($color-button, 10%);
-      }
-
-      &::before {
-        content: 'JOIN';
-      }
     }
 
-    &.disable {
-      label, input {
-        background-color: #ccc;
-      }
-    }
-
-    &.wait {
-      a {
-        background: lighten($color-button, 10%) url('../loading.gif') center center no-repeat;
-
-        &::before {
-          content: '';
-        }
-      }
-    }
-
-    &.ok {
-      a {
-        background-color: #0b9;
-
-        &::before {
-          content: '✓';
-        }
-      }
-    }
-
-    &.ng {
-      a {
-        &::before {
-          content: 'NG...';
-        }
-      }
+    label, input {
+      background-color: #ccc;
     }
   }
+
+  .success { color: #0b9; }
+  .error { color: $color-key; }
+
+  @mixin invitation_button($name, $background-color, $label) {
+    .invitation_#{$name} {
+      .submit {
+        background-color: $background-color;
+        &::before { content: $label; }
+      }
+      @content;
+    }
+  }
+
+  @include invitation_button('unsent',  $color-button, 'JOIN') {
+    label, input {
+      background-color: #fff;
+    }
+    .submit:hover {
+      background-color: lighten($color-button, 10%);
+    }
+  }
+  @include invitation_button('sending', $color-button, '') {
+    .submit {
+      background: lighten($color-button, 10%) url('../loading.gif') center center no-repeat;
+    }
+  }
+  @include invitation_button('success', #0b9, '✓');
+  @include invitation_button('error',   $color-button, 'NG...');
 }
 
 @media (max-width: 768px) {
