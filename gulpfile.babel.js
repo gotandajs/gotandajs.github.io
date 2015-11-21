@@ -22,7 +22,7 @@ gulp.task('sass', () => {
 });
 
 const browserifyOpts = {
-  entries: ['./src/scripts/index.js'],
+  entries: ['./src/scripts/index.jsx'],
   transform: ['babelify'],
 };
 

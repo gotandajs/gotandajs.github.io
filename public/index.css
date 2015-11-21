@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -214,7 +215,74 @@ section {
     font-family: 'Montserrat', sans-serif;
     color: #ff9; }
 
+#slack_form form {
+  display: table;
+  font-size: 1.5em;
+  color: #333;
+  height: 2.5em;
+  width: 100%;
+  max-width: 20em;
+  margin: 1em auto; }
+  #slack_form form > * {
+    display: table-cell; }
+  #slack_form form label {
+    width: 2.5em;
+    background: #fff url("../slack.png") center center no-repeat;
+    background-size: 1.5em;
+    vertical-align: middle;
+    border-radius: .2em 0 0 .2em; }
+  #slack_form form input {
+    width: 100%;
+    height: 2.5em;
+    border: 0; }
+  #slack_form form .submit {
+    width: 4em;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 0 .2em .2em 0; }
+  #slack_form form label, #slack_form form input {
+    background-color: #ccc; }
+
+#slack_form .success {
+  color: #0b9; }
+
+#slack_form .error {
+  color: #ff9; }
+
+#slack_form .invitation_unsent .submit {
+  background-color: #e05; }
+  #slack_form .invitation_unsent .submit::before {
+    content: "JOIN"; }
+
+#slack_form .invitation_unsent label, #slack_form .invitation_unsent input {
+  background-color: #fff; }
+
+#slack_form .invitation_unsent .submit:hover {
+  background-color: #ff2271; }
+
+#slack_form .invitation_sending .submit {
+  background-color: #e05; }
+  #slack_form .invitation_sending .submit::before {
+    content: ""; }
+
+#slack_form .invitation_sending .submit {
+  background: #ff2271 url("../loading.gif") center center no-repeat; }
+
+#slack_form .invitation_success .submit {
+  background-color: #0b9; }
+  #slack_form .invitation_success .submit::before {
+    content: "✓"; }
+
+#slack_form .invitation_error .submit {
+  background-color: #e05; }
+  #slack_form .invitation_error .submit::before {
+    content: "NG..."; }
+
 @media (max-width: 768px) {
   header h1 {
     font-size: 3em;
-    line-height: 6em; } }
+    line-height: 6em; }
+  #slack form {
+    font-size: 1em; } }

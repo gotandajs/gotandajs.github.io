@@ -88,4 +88,4 @@ class Vert {
   }
 }
 
-initialize();
+export default initialize;

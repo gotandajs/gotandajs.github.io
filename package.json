@@ -10,12 +10,16 @@
     "start": "gulp"
   },
   "dependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "superagent": "*",
     "voronoi": "*"
   },
   "devDependencies": {
     "babel": "*",
     "babel-core": "*",
     "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
     "babelify": "*",
     "browserify": "*",
     "gulp": "*",
