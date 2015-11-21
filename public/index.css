@@ -234,7 +234,9 @@ section {
   #slack_form form input {
     width: 100%;
     height: 2.5em;
-    border: 0; }
+    border: 0;
+    border-radius: 0;
+    padding: 0; }
   #slack_form form .submit {
     width: 4em;
     color: #fff;
