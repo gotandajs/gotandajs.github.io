@@ -22201,7 +22201,7 @@ var Slack = (function (_React$Component) {
           'form',
           { onSubmit: this.onSubmit.bind(this) },
           _react2.default.createElement('label', { htmlFor: 'email' }),
-          _react2.default.createElement('input', { type: 'text', name: 'email', placeholder: 'you@yourdomain.com', ref: 'email' }),
+          _react2.default.createElement('input', { type: 'text', name: 'email', id: 'email', placeholder: 'you@yourdomain.com', ref: 'email' }),
           _react2.default.createElement('a', { href: '#', className: 'submit', onClick: this.onSubmit.bind(this) })
         ),
         Success,

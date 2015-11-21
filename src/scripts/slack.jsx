@@ -46,7 +46,7 @@ class Slack extends React.Component {
         {/* なぜか明示的にthisをbindしないと動かない */}
         <form onSubmit={this.onSubmit.bind(this)}>
           <label htmlFor="email"></label>
-          <input type="text" name="email" placeholder="you@yourdomain.com" ref="email" />
+          <input type="text" name="email" id="email" placeholder="you@yourdomain.com" ref="email" />
           <a href="#" className="submit" onClick={this.onSubmit.bind(this)}></a>
         </form>
         {Success}
