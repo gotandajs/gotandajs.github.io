@@ -218,9 +218,7 @@ section {
 @media (max-width: 768px) {
   header h1 {
     font-size: 3em;
-    line-height: 6em; }
-  #slack form {
-    font-size: 1em; } }
+    line-height: 6em; } }
 
 #slack_form form {
   display: table;
@@ -288,3 +286,7 @@ section {
   background-color: #e05; }
   #slack_form .invitation_error .submit::before {
     content: "NG..."; }
+
+@media (max-width: 768px) {
+  #slack_form form {
+    font-size: 1em; } }

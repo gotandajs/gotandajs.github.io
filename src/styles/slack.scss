@@ -71,3 +71,9 @@
   @include invitation_status('success', $color-slack-success, '✓');
   @include invitation_status('error', $color-slack-error, 'NG...');
 }
+
+@media (max-width: 768px) {
+  #slack_form form {
+    font-size: 1em;
+  }
+}
