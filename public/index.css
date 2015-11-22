@@ -215,6 +215,13 @@ section {
     font-family: 'Montserrat', sans-serif;
     color: #ff9; }
 
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 3em;
+    line-height: 6em; }
+  #slack form {
+    font-size: 1em; } }
+
 #slack_form form {
   display: table;
   font-size: 1.5em;
@@ -245,7 +252,7 @@ section {
     vertical-align: middle;
     border-radius: 0 .2em .2em 0; }
   #slack_form form label, #slack_form form input {
-    background-color: #ccc; }
+    background-color: #999999; }
 
 #slack_form .success {
   color: #0b9; }
@@ -281,10 +288,3 @@ section {
   background-color: #e05; }
   #slack_form .invitation_error .submit::before {
     content: "NG..."; }
-
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 3em;
-    line-height: 6em; }
-  #slack form {
-    font-size: 1em; } }
