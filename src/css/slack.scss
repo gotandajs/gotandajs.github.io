@@ -14,7 +14,7 @@
 
     label {
       width: 2.5em;
-      background: $color-light url('../slack.png') center center no-repeat;
+      background: $color-light url('../img/slack.png') center center no-repeat;
       background-size: 1.5em;
       vertical-align: middle;
       border-radius: .2em 0 0 .2em;
@@ -65,7 +65,7 @@
   }
   @include invitation_status('sending', $color-slack-default, '') {
     .submit {
-      background: lighten($color-slack-default, 10%) url('../loading.gif') center center no-repeat;
+      background: lighten($color-slack-default, 10%) url('../img/loading.gif') center center no-repeat;
     }
   }
   @include invitation_status('success', $color-slack-success, '✓');
