@@ -8,10 +8,21 @@
 
   <title>Gotanda.js</title>
 
-  <link rel="icon" href="./icon.png" />
-  <link rel="apple-touch-icon" href="./icon.png" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700" />
-  <script src="./lib/bundle.js" defer></script>
+  <link rel="icon" href="/icon.png" />
+  <link rel="apple-touch-icon" href="/icon.png" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:700" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="/assets/style.css" />
+  <script src="//cdn.hotolab.net/slack-invite-form.min.js"></script>
+  <script src="/assets/analytics.js"></script>
+  <script src="/assets/gorhill-voronoi.js"></script>
+  <script src="/assets/voronoi.js"></script>
+  <script>
+    window.onload = function() {
+      voronoi( document.getElementById('voronoi') );
+      renderSlackInviteForm('slack_form', 'https://api.hotolab.net/gotandajs/slack');
+    };
+  </script>
 </head>
 <body>
 
